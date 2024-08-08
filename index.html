@@ -1,0 +1,45 @@
+<html>
+<head>
+    <style>
+        body{
+            background-color: #1b1b1b;
+            font-family: 'Courier New', Courier, monospace;
+            color: #d9d9d9;
+        }
+
+        img{
+            height:100px;
+            width:100px;
+        }
+        
+        .container{
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <img id="gif" src="1.png">
+        <p>nothing to exist</p>
+    </div>
+    
+
+    <script>
+        const image = document.getElementById("gif");
+
+        image.addEventListener("click", function (){
+            image.src = "star-gif.gif";
+            // await delay (5000);
+            // image.src = "1.png";
+        });
+
+    </script>
+</body>
+</html>
