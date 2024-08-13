@@ -29,19 +29,33 @@
 <body>
 
     <div class="container">
-        <img id="gif" src="star-gif.gif">
+        <img id="gif" src="1.png">
         <p>nothing to exist</p>
     </div>
     
 
     <script>
-        const image = document.getElementById("gif");
+        
+        const imageElement = document.getElementById('gif');
 
-        image.addEventListener("click", function (){
-            image.src = "star-gif.gif";
-            // await delay (5000);
-            // image.src = "1.png";
-        });
+        // Define the URLs of the images you want to toggle between
+        const firstImage = 'star-gif.gif'; // The image to display on click
+        const secondImage = '1.png'; // The image to display after a few seconds
+
+        // Define the delay in milliseconds
+        const delay = 1200; // 2 seconds
+
+        // Add an event listener for click events on the image
+        imageElement.addEventListener('click', () => {
+        // Change the image source on click
+        imageElement.src = firstImage;
+
+        // Change the image source back after the specified delay
+        setTimeout(() => {
+            imageElement.src = secondImage;
+        }, delay);
+    });
+
 
     </script>
 </body>
