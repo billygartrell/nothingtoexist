@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: auto; /* Ensures vertical scrolling works */
+}
+
 body{
     background-color: #1b1b1b;
     font-family: 'Courier New', Courier, monospace;
@@ -19,7 +25,9 @@ a, a:visited{
     justify-content: center;
     padding-left:32px;
     padding-right:32px;
-    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    box-sizing: border-box; 
+    min-height: 100vh; /* Ensure it fills the viewport */
+    box-sizing: border-box; /* Prevent padding from causing overflow */
 }
 
 .content{
