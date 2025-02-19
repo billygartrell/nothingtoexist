@@ -1,0 +1,63 @@
+body{
+    background-color: #1b1b1b;
+    font-family: 'Courier New', Courier, monospace;
+    color: #d9d9d9;
+    padding:0;
+    margin:0;
+}
+
+a, a:visited{
+    color:aquamarine;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left:32px;
+    padding-right:32px;
+}
+
+.content{
+    width:100%;
+}
+
+.release-image{
+    width:100%;
+}
+
+.logo{
+    height:75px;
+    width:75px;
+    cursor: pointer;
+}
+
+.nte-001{
+    background-color:#234c43;
+}
+
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+    .content{
+        width:400px;
+    }
+
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }
