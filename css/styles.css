@@ -19,6 +19,7 @@ a, a:visited{
     justify-content: center;
     padding-left:32px;
     padding-right:32px;
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
 }
 
 .content{
