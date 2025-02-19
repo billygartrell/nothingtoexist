@@ -18,9 +18,13 @@
             color: #d9d9d9;
         }
 
+        a, a:visited{
+            color:aquamarine;
+        }
+
         img{
-            height:100px;
-            width:100px;
+            height:75px;
+            width:75px;
             cursor: pointer;
         }
         
@@ -32,14 +36,26 @@
             align-items: center;
             justify-content: center;
         }
+
+        .content{
+            width:400px;
+        }
     </style>
 
 </head>
 <body>
 
     <div class="container">
-        <img id="gif" src="1.png">
-        <p>nothing to exist</p>
+        <div class="content">
+            <img id="gif" src="1.png">
+            <!-- <p>nothing to exist</p> -->
+            <p>Nothing to Exist is an independent label from New York City focusing on physical presses of music.<br><br>
+                ~
+                <br><br>
+    
+                <a href="../nothingtoexist/releases/nte-001.html" title="NTE-001">NTE-001</a>, <a href="https://www.instagram.com/volenaband/" target="_blank" title="Volena's Instagram">Volena</a>'s debut EP, will be released April 4, 2025. You can <a href="https://volena.bandcamp.com/track/groceries-2" target="_blank" title="Volena's Bandcamp">pre-order it here</a>.
+            </p>
+        </div>
     </div>
     
 
@@ -55,7 +71,7 @@
         const delay = 1200; // 2 seconds
 
         // Add an event listener for click events on the image
-        imageElement.addEventListener('click', () => {
+        imageElement.addEventListener('mouseover', () => {
         // Change the image source on click
         imageElement.src = firstImage;
 
