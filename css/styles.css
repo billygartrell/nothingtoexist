@@ -32,9 +32,10 @@ a, a:visited{
 
 .content{
     width:100%;
+    padding-top:50px;
 }
 
-.release-image{
+img{
     width:100%;
 }
 
@@ -47,6 +48,7 @@ a, a:visited{
 .nte-001{
     background-color:#234c43;
 }
+
 
 
 /* // X-Small devices (portrait phones, less than 576px)
