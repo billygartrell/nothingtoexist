@@ -49,6 +49,12 @@ img{
     background-color:#234c43;
 }
 
+table{
+    width:80%;
+    font-size:14px;
+    text-align: left;
+
+}
 
 
 /* // X-Small devices (portrait phones, less than 576px)
