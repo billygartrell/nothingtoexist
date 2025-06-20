@@ -19,9 +19,9 @@ a, a:visited{
 }
 
 .primary-nav a, .primary-nav a:visited{
-    color:white;
+    /* color:white; */
     text-transform: uppercase;
-    text-decoration: none;
+    /* text-decoration: none; */
     letter-spacing: 2px;
     font-weight: 100;
 }
@@ -59,6 +59,10 @@ img{
 
 .nte-001{
     background-color:#234c43;
+}
+
+.nte-002{
+    background-color:#074d68;
 }
 
 table{
