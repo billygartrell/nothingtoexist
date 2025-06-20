@@ -12,9 +12,21 @@ body{
     margin:0;
 }
 
+
+
 a, a:visited{
     color:aquamarine;
 }
+
+.primary-nav a, .primary-nav a:visited{
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+
 
 .container{
     width:100%;
