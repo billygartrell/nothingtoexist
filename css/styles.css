@@ -69,9 +69,13 @@ table{
     width:80%;
     font-size:14px;
     text-align: left;
-
 }
 
+.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
