@@ -4,47 +4,136 @@ html, body {
     overflow-y: auto; /* Ensures vertical scrolling works */
 }
 
+h1,h2,h3,h4,h5,h6{
+    margin-bottom:16px;
+    padding:0;
+}
+
 body{
     background-color: #1b1b1b;
     font-family: 'Courier New', Courier, monospace;
     color: #d9d9d9;
     padding:0;
     margin:0;
+    line-height: 1.6;
 }
-
-
 
 a, a:visited{
     color:aquamarine;
 }
 
 .primary-nav a, .primary-nav a:visited{
-    /* color:white; */
     text-transform: uppercase;
-    /* text-decoration: none; */
     letter-spacing: 2px;
     font-weight: 100;
 }
 
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Nav container */
+.nav {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+/* Brand */
+.nav-brand {
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+/* ------------------------------- */
+/* MOBILE-FIRST NAV BEHAVIOR       */
+/* ------------------------------- */
+
+/* Mobile: hide menu initially */
+.nav-links {
+  list-style: none;
+  display: none; /* ❗ Hidden on mobile */
+  flex-direction: column;
+  gap: 1rem;
+
+  position: absolute;
+  top: 64px;
+  right: 0;
+  background: black;
+  width: 200px;
+  padding: 1rem;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: .75rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links .active {
+  text-decoration: underline;
+}
+
+/* When toggled open */
+.nav-links.open {
+  display: flex;
+}
+
+/* Mobile: show hamburger */
+.nav-toggle {
+  display: flex; /* ❗ Visible on mobile */
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Container */
 .container{
     width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     padding-left:32px;
     padding-bottom:32px;
     padding-right:32px;
-    box-sizing: border-box; 
-    min-height: 100vh; /* Ensure it fills the viewport */
-    box-sizing: border-box; /* Prevent padding from causing overflow */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.home .container{
+    justify-content: center;
 }
 
 .content{
     width:100%;
     padding-top:50px;
+}
+
+.section{
+    width:100%;
+    margin-bottom:50px;
 }
 
 img{
@@ -65,6 +154,15 @@ img{
     background-color:#074d68;
 }
 
+.nte-003{
+    background-color:#968455;
+    color:white;
+}
+
+.breadcrumb{
+    font-size:12px;
+}
+
 table{
     width:80%;
     font-size:14px;
@@ -77,26 +175,54 @@ table{
     align-items: center;
 }
 
-/* // X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap */
+a.external-link::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.15em;
+  margin-top:0.25em;
+  background-color: currentColor;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14"/></svg>') no-repeat center / contain;
+}
 
-/* // Small devices (landscape phones, 576px and up) */
+/* ----------------------------------- */
+/* BREAKPOINTS (MOBILE → DESKTOP)      */
+/* ----------------------------------- */
+
+/* // Small devices (≥ 576px) */
 @media (min-width: 576px) { 
-
     .content{
-        width:400px;
+        width:550px;
     }
+}
 
- }
+/* // Medium devices (≥ 768px) — DESKTOP NAV */
+@media (min-width: 768px) { 
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
+  /* Desktop: show normal horizontal menu */
+  .nav-links {
+    display: flex !important; /* ❗ Force show */
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    width: auto;
+  }
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {  }
+  /* Desktop: hide hamburger */
+  .nav-toggle {
+    display: none;
+  }
+}
 
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  }
+/* // Large devices (≥ 992px) */
+@media (min-width: 992px) { }
 
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {  }
+/* // X-Large devices (≥ 1200px) */
+@media (min-width: 1200px) { }
+
+/* // XX-Large devices (≥ 1400px) */
+@media (min-width: 1400px) { }
