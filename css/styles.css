@@ -140,6 +140,12 @@ img{
     width:100%;
 }
 
+.artist-wailfall-photo{
+    aspect-ratio:3 / 2;
+    object-fit:cover;
+    object-position:center 36%;
+}
+
 .logo{
     height:75px;
     width:75px;
@@ -157,6 +163,33 @@ img{
 .nte-003{
     background-color:#968455;
     color:white;
+}
+
+.nte-004{
+    background-color:#2a422f;
+    color:#f0e9db;
+}
+
+.nte-004 a,
+.nte-004 a:visited{
+    color:#bce3c8;
+}
+
+.nte-004 .nav-toggle span{
+    background-color:#f0e9db;
+}
+
+@media (max-width:767px) {
+    .nte-004 .nav-links{
+        background-color:#203629;
+        border-color:#607962;
+    }
+}
+
+.nte-004 .release-image{
+    aspect-ratio:3610 / 2031;
+    object-fit:cover;
+    object-position:center 55%;
 }
 
 .breadcrumb{
