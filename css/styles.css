@@ -115,7 +115,7 @@ a:focus-visible{
 /* Nav container */
 .nav {
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -359,6 +359,11 @@ img{
     display:block;
 }
 
+.release-specs + .release-image{
+    border:1px solid white;
+    border-top:0;
+}
+
 .home .wave-divider,
 .release-header + .wave-divider,
 .artist-header + .wave-divider{
@@ -394,7 +399,7 @@ img{
 }
 
 .catalog-list li{
-    padding:1rem 0;
+    padding:1.25rem 0;
 }
 
 .catalog-list li + li{
@@ -412,7 +417,6 @@ img{
 .release-specs{
     display:grid;
     gap:1px;
-    margin-bottom:1.25rem;
     padding:1px;
     background-color:white;
     color:var(--paper);
