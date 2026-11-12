@@ -16,15 +16,36 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-});
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (navToggle && navLinks) {
+    const setMenuOpen = (open) => {
+      navToggle.setAttribute("aria-expanded", String(open));
+      navLinks.classList.toggle("open", open);
+    };
 
+    navToggle.addEventListener("click", () => {
+      setMenuOpen(navToggle.getAttribute("aria-expanded") !== "true");
+    });
 
-// Navigation Toggle
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
+    navToggle.closest("nav").addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+        setMenuOpen(false);
+        navToggle.focus();
+      }
+    });
+  }
 
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+  const nav = document.querySelector(".nav, .home-nav");
+  if (nav) {
+    const updateStickyBorder = () => {
+      const isSticky = window.scrollY > 0 && nav.getBoundingClientRect().top <= 0;
+      nav.classList.toggle("is-sticky", isSticky);
+    };
+    window.addEventListener("scroll", updateStickyBorder, { passive: true });
+    window.addEventListener("resize", updateStickyBorder);
+    updateStickyBorder();
+  }
 });
 
 
