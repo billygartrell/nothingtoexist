@@ -355,6 +355,29 @@ img{
 }
 
 .release-header .release-image,
+.lineup-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: #65575f transparent;
+}
+
+.lineup-scroll::-webkit-scrollbar {
+  height: 6px;
+  background: transparent;
+}
+
+.lineup-scroll::-webkit-scrollbar-track,
+.lineup-scroll::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.lineup-scroll::-webkit-scrollbar-thumb {
+  background: #65575f;
+  border-radius: 4px;
+}
+
 .artist-header img{
     display:block;
 }
